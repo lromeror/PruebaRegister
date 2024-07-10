@@ -199,12 +199,14 @@ grid_table = html.Div([
     Input('interval-component', 'n_intervals'),prevent_initial_call=True)
 def update_table(n): 
     global cantDatos,varBoolean
-    df=get_Registros()
-    rowData = df.to_dict("records")
-    if n==0 or cantDatos==len(rowData) or varBoolean :
-        cantDatos=len(rowData)
+    df=get_df()
+    df_regis=get_Registros()
+    rowData=df.to_dict('records')
+    rowData_re = df_regis.to_dict("records")
+    if n==0 or cantDatos==len(df_regis) or varBoolean :
+        cantDatos=len(rowData_re)
         return
-    cantDatos=len(rowData)
+    cantDatos=len(rowData_re)
     return rowData
 
 div_filtrar = html.Div([
@@ -558,4 +560,4 @@ app.layout = html.Div([
 
 
 if __name__ == '__main__':
-    app.run_server(host='127.0.0.1',port=8020 ,debug=True)
+    app.run_server(host='127.0.0.2',port=8020 ,debug=True)
