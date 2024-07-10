@@ -1,0 +1,154 @@
+.page {
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+}
+
+.pagdding_navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.w1_2 {
+    width: 50%;
+}
+
+.col_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 35vw;
+    height: auto;
+}
+
+.text-responsive {
+    font-size: 2vw;
+}
+
+.border-b-green {
+    border-bottom: 4px solid;
+    border-color: rgb(6, 158, 6);
+}
+
+
+.body {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.input_filter {
+    width: 60%;
+    height: 50px;
+    border-radius: 10px;
+    padding: 0px 20px;
+}
+
+.row_filtrar {
+    display: flex;
+    width: 100%;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 0 40px 0;
+}
+
+.dropdown {
+    width: 20%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-width: 250px
+}
+
+.Select-control{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    height: 50px !important;
+    justify-content: end;
+    align-items: center;
+    min-width: 300px
+}
+
+.Select-value{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 700px) {
+    .row_filtrar{
+        display: flex;
+        flex-direction: column;
+        place-content: center;
+        place-items: center;
+    }
+    .dropdown{
+        margin-right: 50px;
+    }
+
+}
+@media (min-width: 700px) and (max-width: 1500px) {
+    .input_filter{
+        margin-left: 50px;
+    }
+}
+
+.div_table{
+    width: 100%;
+}
+
+.height50{
+    height: 50px;
+}
+
+.Info_Usuario{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 80px;
+}
+
+.div_col{
+    display: flex;
+    flex-direction: column;
+    place-content: center;
+}
+
+.input_registros{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.col_row{
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+.info_row{
+    display: flex;
+    flex-direction: row;
+}
+
+.row_button{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}

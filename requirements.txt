@@ -1,0 +1,11 @@
+pandas
+openpyxl
+dash
+dash-bootstrap-components
+dash_ag_grid
+sqlalchemy
+sqlalchemy.orm
+config
+mysqlclient
+dash_daq
+gunicorn
