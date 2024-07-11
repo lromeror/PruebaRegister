@@ -29,7 +29,7 @@ USER = "root"
 PASSWORD = "UAxgbfibezWmZpWKvXBANZtRbWuvcObR"
 HOST = "viaduct.proxy.rlwy.net"
 PORT = "49882"
-BD = "railway"
+BD = "railway2"
 db_url = f"mysql://{USER}:{PASSWORD}@{HOST}:{PORT}/{BD}"
 engine = create_engine(db_url)
 
@@ -210,7 +210,7 @@ def update_table(n):
     df_regis=get_Registros()
     rowData=df.to_dict('records')
     rowData_re = df_regis.to_dict("records")
-    if n==0 or cantDatos==len(df_regis) or varBoolean :
+    if n==0 or cantDatos==len(rowData_re) or varBoolean :
         cantDatos=len(rowData_re)
         return
     cantDatos=len(rowData_re)
