@@ -25,13 +25,20 @@ import pandas as pd
 from sqlalchemy import create_engine, exc
 
 # Configuración de la conexión a la base de datos
-USER = "aszurita"
-PASSWORD = "S6c%QtidQGjF"
-HOST = "aszuritaserver.mysql.database.azure.com"
-BD = "WIDSESPOL2025_2"
-db_url = f"mysql://{USER}:{PASSWORD}@{HOST}/{BD}"
+USER = "root"
+PASSWORD = "UAxgbfibezWmZpWKvXBANZtRbWuvcObR"
+HOST = "viaduct.proxy.rlwy.net"
+PORT = "49882"
+BD = "railway"
+db_url = f"mysql://{USER}:{PASSWORD}@{HOST}:{PORT}/{BD}"
 engine = create_engine(db_url)
 
+try:
+    connection = engine.connect()
+    print("Conexión exitosa")
+    connection.close()
+except Exception as e:
+    print(f"Error de conexión: {e}")
 
 def formatDf(df):
     df = df.rename(columns={
