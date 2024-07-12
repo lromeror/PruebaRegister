@@ -208,11 +208,13 @@ def update_table(n):
     global cantDatos,varBoolean
     df=get_df()
     df_regis=get_Registros()
-    rowData=df.to_dict('records')
+    
     rowData_re = df_regis.to_dict("records")
     if n==0 or cantDatos==len(rowData_re) or varBoolean :
         cantDatos=len(rowData_re)
         return
+    print('Pase actual')
+    rowData=df.to_dict('records')
     cantDatos=len(rowData_re)
     return rowData
 

@@ -1,14 +1,6 @@
 create database railway2;
 use railway2;
-delimiter //
-create trigger after_delete_register
-after delete on personas
-for each row
-begin
-    insert into historial (id_persona) values (old.id_persona);
-end;
-//
-delimiter ;
+
 create table personas (
     id_persona int auto_increment primary key,
     nombre varchar(255),
